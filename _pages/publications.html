@@ -1,36 +1,96 @@
 ---
 layout: archive
-title: "Publications"
+title: "Projects"
 permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<div class="projects-list">
+    <h1>Projects</h1>
+    <p>Welcome to my project portfolio. Below, you'll find a selection of my work across various domains.</p>
 
-{% include base_path %}
+    <!-- TinyWL Window Manager Project -->
+    <div class="project-item">
+        <h2><strong>TinyWL based Window Manager for Linux</strong> <span>(December 2024 - Present)</span></h2>
+        <p><strong>Advisor:</strong> Prof. Balgopal Komarath</p>
+        <p><strong>Description:</strong> Developing a custom window manager, TinyWL, in C, focused on adding advanced features such as dual-window display, stacking, tiling, and window merging (snapping). This project incorporates the implementation of efficient window management techniques, enhances user interaction, and contributes to the Linux Society.</p>
+        <p><strong>Technologies Used:</strong> C, Linux</p>
+        <p><strong>GitHub Repository:</strong> <a href="https://github.com/TejasLohia21/Tiny_WL">The repository will be private until the project completion</a></p>
+        <!-- <p><strong>Live Demo:</strong> <a href="#">Link to demo</a></p> -->
+    </div>
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+    <hr>
 
+ <!-- Automated Room Occupancy Detection and Lighting Control -->
+ <div class="project-item">
+      <h2><strong>Automated Room Occupancy Detection and Lighting Control</strong> <span>(Jan 2024 - April 2024)</span></h2>
+      <p><strong>Advisor:</strong> Prof. Arup Lal Chakraborty</p>
+      <p><strong>Description:</strong> Designed and implemented an automated room occupancy detection system using laser modules and photodiodes to
+        monitor entry and exit events. Integrated the system with an Arduino Uno microcontroller to control lighting based on real-time occupancy data. The system also logged energy consumption and achieved a 15 percent reduction in energy usage compared to manual
+        control systems. Tested and refined the system under various scenarios, ensuring over 90 percent detection accuracy and near-instantaneous response times.</p>
+      <p><strong>Technologies Used:</strong> Arduino IDE, C++ for Embedded systems , Tinkercad, Arduino Uno,Laser Technology, Signal Processing </p>
+      <p><strong>Documentation:</strong>For detailed analysis and documentation, please refer to the linked paper: <a href="https://drive.google.com/file/d/19C8Kdmq1z5moZbR7krNP-1m9fv9-mtFH/view">Automated Room Occupancy Detection and Lighting Control Paper</a></p>
+      <p><strong>GitHub Repository:</strong> <a href="https://github.com/zainabkapadia52/ES-116-Project--Automated-Room-Occupancy-Detection-and-Lighting-Control">Link to repo</a></p>
 
+</div>
 
+    <hr>
+
+<!-- Otsu's Thresholding and Noise Analysis -->
+<div class="project-item">
+    <h2><strong>Otsu's Thresholding and Noise Analysis</strong> <span>(Jan 2024 - April 2024)</span></h2>
+    <p><strong>Advisor:</strong> Prof. Shanmuganathan Raman</p>
+    <p><strong>Description:</strong> Implemented Otsu's Thresholding method to binarize grayscale images, segmenting foreground and background based on optimal intensity thresholding. Added Gaussian noise with varying variances to assess the robustness of the method under different noise conditions. Visualized and analyzed thresholding results using Matplotlib, comparing the impact of noise on segmentation quality. Developed a fully customized implementation instead of relying on existing sample codes, ensuring a deep understanding of the algorithm.</p>
+    <p><strong>Technologies Used:</strong> OpenCV, NumPy, Streamlit, Plotly, Matplotlib</p>
+    <p><strong>Web App Link:</strong> <a href="https://zainabkapadia52-image-thresholding-webapp.streamlit.app">Otsu's Thresholding Web App</a></p>
+    <p><strong>Repo Link:</strong> <a href="https://github.com/zainabkapadia52/Image_Thresholding_Web_App">Github Repository</a></p>
+</div>
+
+    <hr>
+
+<!-- Uniform Photo Styling via Histogram Matching -->
+<div class="project-item">
+    <h2><strong>Uniform Photo Styling via Histogram Matching</strong> <span>(Jan 2024 - April 2024)</span></h2>
+    <p><strong>Advisor:</strong> Prof. Shanmuganathan Raman</p>
+    <p><strong>Description:</strong> Developed a Photo Style Consistency App that uses histogram matching to transfer the tonal characteristics from a target style image to one or more source images. The app processes images in the YCrCb color space to maintain accurate color representation while adjusting brightness, contrast, and pixel intensity distribution. Interactive visualizations with Plotly and adjustable blending parameters provide real-time feedback on the transformation, ensuring a consistent look across image collections. A fully customized implementation was created to ensure a deep understanding of the histogram matching algorithm.</p>
+    <p><strong>Technologies Used:</strong> OpenCV, NumPy, Streamlit, Plotly, Matplotlib</p>
+    <p><strong>Web App Link:</strong> <a href="https://zainabkapadia52-photo-style.streamlit.app">Photo Style App</a></p>
+    <p><strong>Repo Link:</strong> <a href="https://github.com/zainabkapadia52/Photo_Style_App">Github Repository</a></p>
+</div>
+
+    <hr>
+
+<style>
+    .projects-list {
+        padding: 2rem;
+        background-color: #f9f9f9;
+    }
+
+    .project-item {
+        margin-bottom: 2rem;
+    }
+
+    .project-item h2 {
+        font-size: 1.5rem;
+        color: #333;
+    }
+
+    .project-item span {
+        font-size: 1rem;
+        color: #777;
+    }
+
+    .project-item p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .project-item a {
+        color: #007acc;
+        text-decoration: none;
+    }
+
+    .project-item a:hover {
+        text-decoration: underline;
+    }
+</style>
